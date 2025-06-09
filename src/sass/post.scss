@@ -1,0 +1,105 @@
+@use 'mixin' as m;
+@use 'variables' as v;
+.main__post{
+  flex: 1;
+}
+.container-post{
+  max-width: 80rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.post{
+  line-height: 1.5;
+  @include m.flex(column, flex-start, stretch, 2rem);
+
+  &__title{
+   color: v.$colorLabel;
+   border-bottom: 5px double v.$colorPlaceholder;
+   padding-bottom: 1rem;
+  }
+
+  &__date{
+    color: gray;
+    &::after{
+      padding: 0 1rem;
+      content: '::';
+      font-family: v.$fontHeaders;
+    }
+  }
+
+  &__author{
+    color: v.$colorLabel;
+    font-family: v.$fontHeaders;
+  }
+
+  &__tags{
+    color: gray;
+  }
+
+  &__image{
+    max-height: 50rem;
+  }
+
+  &__content{
+    @include m.flex(column, flex-start, stretch, 2rem);
+    color: v.$primaryColor;
+    font-size: 1.8rem;
+    border-bottom: 2px dotted v.$colorPlaceholder;
+    padding-bottom: 5rem;
+
+    code{
+      background-color: #E1E1E1;
+      padding: 2rem;
+      color: v.$colorLabel;
+    }
+  }
+}
+
+
+.comments{
+  margin: 5rem 0;
+
+  h2{
+    color: v.$colorLabel;
+  }
+
+  &__form{
+    margin-top: 2rem;
+    @include m.flex(column, flex-start, stretch, 1rem);
+
+    textarea{
+      min-height: 10rem;
+      padding: 1rem;
+      resize: none;
+      width: 100%;
+      
+      &:focus{
+        outline: none;
+        border: 1px solid v.$colorFocus;
+        font-family: inherit
+      }
+    }
+
+    button{
+      @include m.btn;
+    }
+  }
+
+  &__list{
+    margin-top: 5rem;
+    list-style: none;
+    @include m.flex(column, flex-start, stretch, 3rem);
+
+
+    li{
+      @include m.flex(column, flex-start, stretch, 1rem);
+    }
+    &-user{
+      font-family: v.$fontHeaders;
+    }
+    &-content{
+      color: v.$primaryColor;
+    }
+  }
+}

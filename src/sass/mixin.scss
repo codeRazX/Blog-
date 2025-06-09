@@ -1,0 +1,29 @@
+@use 'variables' as v;
+
+@mixin flex($direction: row, $justify: center, $align: stretch, $gap: 0rem){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+@mixin btn($background: black){
+  background-color:$background;
+  color: whitesmoke;
+  font-weight: bold;
+  padding: 1rem 3rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  border: none;
+  position: relative;
+  transition: transform 300ms linear, background-color 300ms ease;
+
+    &:hover,
+    &:focus{
+
+      transform: scale(1.05);
+      background-color: #bdbdbd;
+      color: v.$primaryColor;
+    }
+}

@@ -1,0 +1,11 @@
+@use 'variables' as v;
+
+.footer{
+  text-align: center;
+  font-family: v.$fontTitle;
+  padding: 2rem;
+  
+  a{
+    color: v.$colorFocus;
+  }
+}

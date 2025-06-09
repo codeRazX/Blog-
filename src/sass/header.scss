@@ -1,0 +1,47 @@
+@use 'variables' as v;
+@use 'mixin' as m;
+
+header{
+    border-bottom: 2px solid v.$primaryColor;
+    padding-bottom: 1rem;
+    
+    @include m.flex(row, space-between, center);
+
+    .header__nav{
+      @include m.flex(column, flex-start, stretch, 2rem);
+      align-self: flex-end;
+      p{
+        color: v.$colorPlaceholder;
+        align-self: flex-end;
+      }
+
+      &-logout{
+       color: v.$colorFocus;
+       display: inline-block;
+       &:hover,
+       &:focus{
+        color: green;
+       }
+      }
+
+      &-login{
+        @include m.btn;
+        align-self: flex-end;
+      }
+    }
+
+    h1{
+        margin-top: 4rem;
+        letter-spacing: .5rem;
+        color: v.$primaryColor;
+      
+        span{
+            display: block;
+            line-height: .8;
+        }
+    }
+
+
+  
+    
+}
