@@ -1,0 +1,95 @@
+@use 'mixin' as m;
+@use 'variables' as v;
+.post{
+  
+  
+  padding: 2rem 1rem;
+  background-color: #E1E1E1;
+  animation: appear 300ms linear;
+  @include m.flex(column, flex-start, flex-start, 2rem);
+ 
+  label{
+    color: v.$colorLabel;
+  }
+
+  div{
+    width: 100%;
+  }
+ 
+  h2{
+    margin: 0 auto;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+
+  &__date{
+    @include m.flex(row, space-between, center, 1rem);
+    flex-wrap: wrap;
+    font-size: 1.5rem;
+    width: 100%;
+
+    p{
+      color: v.$primaryColor;
+      font-weight: 600;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    span{
+      color: v.$colorLabel;
+      font-weight: normal;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  }
+
+  &__image{
+    @include m.flex(row, space-between, center, 1rem);
+   
+    @media (max-width: 768px){
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    img{
+      width: 15rem;
+      height: 15rem;
+      border: 5px double v.$colorFocus;
+    }
+
+   
+  }
+
+  &__btn{
+    @include m.flex(row, space-between, center, 5rem);
+
+    button{
+      width: 100%;
+    
+    }
+    
+  
+  }
+
+  &__comments{
+    margin-top: 4rem;
+
+    ul{
+      margin-top: 2rem;
+      list-style: none;
+      @include m.flex(column, flex-start, stretch, 3rem);
+    }
+
+    li{
+      @include m.flex(column, flex-start, stretch, 1rem);
+      background-color: v.$colorBorder;
+      padding: 1rem;
+
+      div{
+        @include m.flex(row, space-between, center, 1rem);
+      }
+    }
+
+    &--default{
+      text-align: center;
+      margin-top: 2rem;
+    }
+  }
+}

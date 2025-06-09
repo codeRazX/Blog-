@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Chronicles</title>
+</head>
+<body>
+    <header class="container">
+        <h1>Coding <span>Chronicles</span></h1>
+        <div data-id="admin" data-display="flex" class="log-out">
+            <p class="username">razape</p>
+            <button class="btn" id="log-out">Sign Out</button>
+        </div>
+        
+    </header>
+
+    <main class="container">
+        <h2 data-id="admin" data-display="block">Welcome Admin</h2>
+
+        <form id="form-login" class="form-login" action="#" novalidate>
+            <div class="form__block">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+            </div>
+
+             <div class="form__block">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter a password">
+            </div>
+            
+            <button>Login</button>
+        </form>
+
+        <div id="dashboard" data-id="admin" data-display="block" class="dashboard">
+            <div class="dashboard-btn">
+                <button class="btn btn-actived" id="btn-user">Create User</button>
+                <button class="btn" id="btn-post">Create Post</button>
+                <button class="btn" id="btn-edit-post">Edit Post</button>
+            </div>
+
+            <div class="dashboard-board">
+
+                <form id="form-post" class="form" action="#" novalidate>
+
+                    <div class="form__block">
+                        <label for="title">Title*:</label>
+                        <input type="text" id="title" name="title" placeholder="Enter title">
+                    </div>
+
+                    <div class="form__block">
+                        <label for="author">Author*:</label>
+                        <input type="text" id="author" name="author" placeholder="Enter author">
+                    </div>
+
+                    <div class="form__block">
+                        <label for="author">Tags:</label>
+                        <input type="text" id="tags" name="tags" placeholder="e.g. code, javascript, web">
+                    </div>
+
+
+                    <div class="form__block">
+                        <label for="image">Image:</label>
+                        <input type="file" id="image" name="image">
+                    </div>
+
+                    <div class="form__block">
+                        <label for="content">Content:*</label>
+                        <textarea type="text" id="content" name="content"  placeholder="Write your post here..."></textarea>
+                    </div>
+                    
+                <button>Send Post</button>
+            </form><!--Close form posts-->
+
+            <form id="form-user" class="form" action="#" novalidate>
+                <div class="form__block">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" placeholder="Enter an username">
+                </div>
+
+                <div class="form__block">
+                    <label for="email_signup">Email Address:</label>
+                    <input type="email" id="email_signup" name="email" placeholder="Enter your email">
+                </div>
+
+                <div class="form__block">
+                    <label for="password_signup">Password:</label>
+                    <input type="password" id="password_signup" name="password" placeholder="Enter a password">
+                </div>
+
+                <div class="form__block">
+                    <label for="confim_password">Confirm Password:</label>
+                    <input type="password" id="confim_password" name="confirm_password" placeholder="Confirm password">
+                </div>
+            
+                <button>Create Account</button>
+            </form> <!--Close form user-->
+
+
+           <form action="#" class="form" id="form-edit" novalidate>
+           
+            
+           </form>
+
+
+
+          
+        </div>
+    </main>
+
+
+</body>
+</html>

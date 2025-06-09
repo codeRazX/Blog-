@@ -1,0 +1,29 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: whitesmoke;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10rem;
+}
+[class$="container"]{
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+img{
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}

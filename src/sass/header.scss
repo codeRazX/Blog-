@@ -1,0 +1,47 @@
+@use 'variables' as v;
+@use 'mixin' as m;
+
+header{
+    border-bottom: 2px solid v.$primaryColor;
+    padding-bottom: 1rem;
+    @include m.flex(row, space-between, center);
+  
+    h1{
+        margin-top: 4rem;
+        font-size: 4rem;
+        letter-spacing: .5rem;
+        color: v.$primaryColor;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        position: relative;
+
+        span{
+            display: block;
+            font-size: 4.5rem;
+            line-height: .8;
+        }
+    }
+
+    .log-out{
+        align-self: flex-end;
+        @include m.flex(column, flex-start, flex-start, 1rem);
+        
+        p{
+            color: v.$primaryColor;
+            position: relative;
+            align-self: flex-end;
+
+            &::before{
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: -1.2rem;
+                transform: translate(0, -50%);
+                width: 1rem;
+                height: 1rem;
+                border-radius: 50%;
+                background-color: greenyellow;
+                border:1px solid yellowgreen;
+            }
+        }
+    }
+}
