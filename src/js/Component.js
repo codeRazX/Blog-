@@ -96,7 +96,7 @@ export default class Components{
         const author = generateHTML('SPAN', '', 'From: '+ comment.author, liComment);
         const content = generateHTML('P', '', comment.content, liComment);
       })
-      //añadir la imagen para eliminar aqui, la imagen de los comentarios
+     
     }
     else{
       const notComments = this.defaultMessage('There are no comments yet', blockComments);
